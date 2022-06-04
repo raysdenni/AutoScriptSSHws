@@ -18,13 +18,13 @@ rm -rf /etc/shadowsocks/domain
 rm -rf /etc/shadowsocks/nsdomain
 rm -rf /var/lib/crot/ipvps.conf
 #
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
-DOMAIN=mantapxsl.my.id
-SUB_DOMAIN=onichan-${sub}.mantapxsl.my.id
-NS_DOMAIN=slowdns-${subsl}.mantapxsl.my.id
-CF_ID=slinfinity69@gmail.com
-CF_KEY=3dcb550a77cb0a64dacf205243e3ac550f9db
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
+subsl=$(</dev/urandom tr -dc a-x0-9 | head -c3)
+DOMAIN=diot.asia
+SUB_DOMAIN=vip-${sub}.diot.asia
+NS_DOMAIN=sdns-${subsl}.diot.asia
+CF_ID=raysdenni@gmail.com
+CF_KEY=521453939d2dd6927cae603cd7923261158b6
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
